@@ -2,26 +2,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML CSS</title>
+  <title>HOME PAGE</title>
   <link rel="stylesheet" href="../../static/app/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body> 
-  <header class="head"> 
+  <header class="head" style="display: flex; justify-content: flex-end; gap: 500px; padding: 15px 15px 0 0; "> 
     <div class="head-frame"> 
-      <div class="head-button"> <a class="head-link" href="#">Thisng to do</a></div>
-      <div class="head-button"> <a class="head-link" href="#">Travel Guide</a></div>
-      <div class="head-button"> <a class="head-link" href="#">Tours</a></div>
+      <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Thisng to do</a></div>
+      <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Travel Guide</a></div>
+      <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Tours</a></div>
     </div>
+    <a href="" class="check-in">
+      <img src="../../static/app/images/user.png" alt="" style="width: 25px; height: 25px;">
+    </a>
   </header>
   <main>
     <section class="card"> 
       <div class="contain">
         <div class="card-contain"> 
           <div class="card-contents"> 
-            <div class="card-contents-img"> <img class="main-img" src="../../static/app/images//anhtieude.png" alt="this is a picture"><img class="group" src="../../static/app/images//group.png" alt=""></div>
+            <div class="card-contents-img"> 
+              <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1695456164332-b9f6cd6e837c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80" class="d-block-w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1695456261833-3794ab617deb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="d-block-w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1695456165190-8637c1098a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80" class="d-block-w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              </div>
             <div class="contents-tittle">
               <div class="contents-tittle-heading">
                 <div class="heading-tittle">
@@ -57,14 +85,14 @@
               <div class="contents-content">
                 <div class="content-tittle">
                   <div class="top">
-                    <h3 class="top-tittle">Thailands Ayutthaya Temples Cruise from Bangkok</h3>
+                    <a class="top-tittle" href="#" style="text-decoration: none;">Thailands Ayutthaya Temples Cruise from Bangkok</a>
                   </div>
                   <div class="ratting">
                     <div class="review"><img class="review-star" src="../../static/app/images//star.png" alt="star"/>
                       <div class="review-text">4.8 (12 reviews)</div>
                     </div>
                     <div class="duration">Duration: 9 hours</div>
-                  </div><a class="content-button" href="" target="_blank" rel="noopener noreferer">Tours Price $61</a>
+                  </div><a class="content-button" href="#" rel="noopener noreferer">Tours Price $61</a>
                 </div>
               </div>
             </div>
@@ -75,14 +103,14 @@
               <div class="contents-content">
                 <div class="content-tittle">
                   <div class="top">
-                    <h3 class="top-tittle">FLoating Markets Day Trip from Bangkok</h3>
+                    <a class="top-tittle" href="#" style="text-decoration: none;">FLoating Markets Day Trip from Bangkok</a>
                   </div>
                   <div class="ratting">
                     <div class="review"><img class="review-star" src="../../static/app/images//star.png" alt="star"/>
                       <div class="review-text">4.8 (12 reviews)</div>
                     </div>
                     <div class="duration">Duration: 9 hours</div>
-                  </div><a class="content-button" href="" target="_blank" rel="noopener noreferer">Tours Price $61</a>
+                  </div><a class="content-button" href="#"  rel="noopener noreferer">Tours Price $61</a>
                 </div>
               </div>
             </div>
@@ -93,14 +121,14 @@
               <div class="contents-content">
                 <div class="content-tittle">
                   <div class="top">
-                    <h3 class="top-tittle">Bangkok Dinner Cruise on the Chao Phraya River</h3>
+                    <a class="top-tittle" href="#" style="text-decoration: none;">Bangkok Dinner Cruise on the Chao Phraya River</a>
                   </div>
                   <div class="ratting">
                     <div class="review"><img class="review-star" src="../../static/app/images//star.png" alt="star"/>
                       <div class="review-text">4.8 (12 reviews)</div>
                     </div>
                     <div class="duration">Duration: 9 hours</div>
-                  </div><a class="content-button" href="" target="_blank" rel="noopener noreferer">Tours Price $61</a>
+                  </div><a class="content-button" href="#" rel="noopener noreferer">Tours Price $61</a>
                 </div>
               </div>
             </div>
@@ -204,7 +232,7 @@
             </div>
           </div>
         </div>
-      </div><a class="button-all" href="" target="_blank">Explore All</a>
+      </div><a class="button-all" href="#" target="_blank">Explore All</a>
     </section>
   </main>
   <footer class="footer">
@@ -222,32 +250,32 @@
           </div>
           <div class="footer-item">
             <h4 class="footer-heading">Services</h4>
-            <ul class="links"> 
-              <li class="link"> <a class="footer-link" href="#">Trip Planner</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour Planning</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour Guide</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour Package</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour advice</a></li>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Trip Planner</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour Planning</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour Guide</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour Package</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour advice</a></li>
             </ul>
           </div>
           <div class="footer-item">
             <h4 class="footer-heading">Support</h4>
-            <ul class="links"> 
-              <li class="link"> <a class="footer-link" href="#">Account</a></li>
-              <li class="link"> <a class="footer-link" href="#">Legal</a></li>
-              <li class="link"> <a class="footer-link" href="#">Contact</a></li>
-              <li class="link"> <a class="footer-link" href="#">Terms &amp;   Condition</a></li>
-              <li class="link"> <a class="footer-link" href="#">Privacy Policy</a></li>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Account</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Legal</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Contact</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Terms &amp;   Condition</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer-item">
             <h4 class="footer-heading">Business</h4>
-            <ul class="links"> 
-              <li class="link"> <a class="footer-link" href="#">Success</a></li>
-              <li class="link"> <a class="footer-link" href="#">About Locato</a></li>
-              <li class="link"> <a class="footer-link" href="#">Blog</a></li>
-              <li class="link"> <a class="footer-link" href="#">Information</a></li>
-              <li class="link"> <a class="footer-link" href="#">Travel Guide</a></li>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Success</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">About Locato</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Blog</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Information</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Travel Guide</a></li>
             </ul>
           </div>
         </div>

@@ -59,12 +59,19 @@ ol {
   list-style-type: none;
 }
 
+.links{
+  padding-left: 0;
+}
+
 .contain {
   width: 100%;
   max-width: 1218px;
   padding: 0 24px;
   margin-left: auto;
   margin-right: auto;
+}
+.top-tittle{
+  text-decoration: none;
 }
 
 .head {
@@ -80,15 +87,38 @@ ol {
   justify-content: center;
   align-items: center;
 }
+
+
+.backup{
+  padding: 30px;
+  background-color: pink;
+}
+.check-in{
+  width: 25px;
+  height: 25px;
+}
+.check-in img{
+  width: 25px;
+  height: 25px;
+}
+
+.head{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+gap: 530px;
+padding: 0 25px 0 0;
+}
 .head-link {
   color: var(--gray-3);
   font-size: 14px;
   font-weight: 500;
-  line-height: 142.857%; /* 142.857% */
+  line-height: 142.867%; /* 142.857% */
   background-color: var(--gray-7);
   padding: 9px 30px;
   border-radius: 10px;
   transition: color 0.2s linear;
+  text-decoration: none;
 }
 .head-link:hover {
   background-color: var(--color-button);
@@ -110,14 +140,19 @@ ol {
   justify-content: space-between;
 }
 
+.head-link  {
+  text-decoration: none;
+}
+
 .card-contents-img {
   position: relative;
   border-radius: 20px;
   width: clamp(133px, 50%, 388px);
   flex-shrink: 0;
+  height: 100%;
 }
 
-.main-img {
+.d-block-w-100 {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -171,6 +206,10 @@ ol {
 
 .contents-tittle-heading {
   margin-bottom: 16px;
+}
+
+.footer-link{
+  text-decoration: none;
 }
 
 .contents-tittle-text {

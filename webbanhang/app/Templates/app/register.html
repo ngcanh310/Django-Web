@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOG IN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/app/css/register.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body> 
+  <header class="head" style="display: block"> 
+    <div class="head-frame">
+      <h4>Welcom to TravelWithMe</h4>
+    </div>
+  </header>
+  <main>
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{form}}
+      <div><input type="submit" name="Create User" style="border: solid;"/></div>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="contain">
+      <div class="footer-list"> 
+        <div class="footer-items"> 
+          <div class="footer-item-logo"> <img class="item-logo" srcset="../../static/app/images/logo-icon.png 2x" alt="Airtrav">
+            <div class="item-tittle">
+              <div class="footer-tittle-1">Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.</div>
+              <form class="footer-tittle-2">
+                <input class="footer-ip" type="email" placeholder="Enter your email">
+                <button class="row-right" type="submit"><img class="button-arrow-right" srcSet="../../static/app/images/line.png 2x" alt="right-arrow"></button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h4 class="footer-heading">Services</h4>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#">Trip Planner</a></li>
+              <li class="link"> <a class="footer-link" href="#">Tour Planning</a></li>
+              <li class="link"> <a class="footer-link" href="#">Tour Guide</a></li>
+              <li class="link"> <a class="footer-link" href="#">Tour Package</a></li>
+              <li class="link"> <a class="footer-link" href="#">Tour advice</a></li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h4 class="footer-heading">Support</h4>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#">Account</a></li>
+              <li class="link"> <a class="footer-link" href="#">Legal</a></li>
+              <li class="link"> <a class="footer-link" href="#">Contact</a></li>
+              <li class="link"> <a class="footer-link" href="#">Terms &amp;   Condition</a></li>
+              <li class="link"> <a class="footer-link" href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h4 class="footer-heading">Business</h4>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#">Success</a></li>
+              <li class="link"> <a class="footer-link" href="#">About Locato</a></li>
+              <li class="link"> <a class="footer-link" href="#">Blog</a></li>
+              <li class="link"> <a class="footer-link" href="#">Information</a></li>
+              <li class="link"> <a class="footer-link" href="#">Travel Guide</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-botton">
+        <div class="footer-texts"> 
+          <div class="footer-text">Copyright© 2021 UIHUT LLC. All rights reserved</div>
+        </div>
+        <div class="footer-social"> 
+          <div class="social"><a href="#"><img src="../../static/app/images//fa.png" alt="logo"></a></div>
+          <div class="social"><a href="#"><img src="../../static/app/images//in.png" alt="logo"></a></div>
+          <div class="social"><a href="#"><img src="../../static/app/images//tw.png" alt="logo"></a></div>
+          <div class="social"><a href="#"><img src="../../static/app/images//ins.png" alt="logo"></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
