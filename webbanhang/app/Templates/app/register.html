@@ -24,8 +24,9 @@
   <main>
     <form action="" method="POST">
       {% csrf_token %}
-      {{form}}
-      <div><input type="submit" name="Create User" style="border: solid;"/></div>
+      {{form.as_p}}
+      <div><input type="submit" name="Create User" style="border: solid; width: 70px; margin-top: 15px; border-radius: 20px;"/></div>
+      <div style="display: flex; justify-content: center; margin-top: 10px; font-size: 18px;"><a href="check" style="border: 1px solid #2979ffff; border-radius: 20px;  padding: 8px;" class="check" >Log in</a></div>
     </form>
   </main>
   <footer class="footer">
