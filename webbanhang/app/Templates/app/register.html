@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOG IN</title>
+  <title>REGISTER</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -16,75 +16,102 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body> 
-  <header class="head" style="display: block"> 
+  <header class="head" style="display: block; margin-bottom: 0"> 
     <div class="head-frame">
       <h4>Welcom to TravelWithMe</h4>
     </div>
   </header>
   <main>
-    <form action="" method="POST">
-      {% csrf_token %}
-      {{form.as_p}}
-      <div><input type="submit" name="Create User" style="border: solid; width: 70px; margin-top: 15px; border-radius: 20px;"/></div>
-      <div style="display: flex; justify-content: center; margin-top: 10px; font-size: 18px;"><a href="check" style="border: 1px solid #2979ffff; border-radius: 20px;  padding: 8px;" class="check" >Log in</a></div>
-    </form>
-  </main>
-  <footer class="footer">
-    <div class="contain">
-      <div class="footer-list"> 
-        <div class="footer-items"> 
-          <div class="footer-item-logo"> <img class="item-logo" srcset="../../static/app/images/logo-icon.png 2x" alt="Airtrav">
-            <div class="item-tittle">
-              <div class="footer-tittle-1">Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.</div>
-              <form class="footer-tittle-2">
-                <input class="footer-ip" type="email" placeholder="Enter your email">
-                <button class="row-right" type="submit"><img class="button-arrow-right" srcSet="../../static/app/images/line.png 2x" alt="right-arrow"></button>
-              </form>
+    <section class="vh-100" style="background-color: #eee;">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-12 col-xl-11">
+            <div class="card text-black" style="border-radius: 25px;">
+              <div class="card-body p-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+    
+                    <form class="mx-1 mx-md-4" method = "POST" action="" style="margin-bottom: 50px">
+                      {% csrf_token %}
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          {{form.username}}
+                          <label class="form-label" for="form3Example1c">Your Name</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          {{form.email}}
+                          <label class="form-label" for="form3Example3c">Your Email</label>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          {{form.first_name}}
+                          <label class="form-label" for="form3Example3c">Your First Name</label>
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          {{form.last_name}}
+                          <label class="form-label" for="form3Example3c">Your Last Name</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          {{form.password1}}
+                          <label class="form-label" for="form3Example4c">Password</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          {{form.password2}}
+                          <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                        </div>
+                      </div>
+    
+                      <div class="form-check d-flex justify-content-center mb-5">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                        <label class="form-check-label" for="form2Example3">
+                          I agree all statements in <a href="#!">Terms of service</a>
+                        </label>
+                      </div>
+    
+                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                        <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                      </div>
+                      
+                      <p> You have a acount ? <a href = {% url 'check' %} > Log in </a> </p>
+
+                    </form>
+    
+                  </div>
+                  <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+    
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                      class="img-fluid" alt="Sample image">
+    
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="footer-item">
-            <h4 class="footer-heading">Services</h4>
-            <ul class="links" style="padding-left: 0;"> 
-              <li class="link"> <a class="footer-link" href="#">Trip Planner</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour Planning</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour Guide</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour Package</a></li>
-              <li class="link"> <a class="footer-link" href="#">Tour advice</a></li>
-            </ul>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-heading">Support</h4>
-            <ul class="links" style="padding-left: 0;"> 
-              <li class="link"> <a class="footer-link" href="#">Account</a></li>
-              <li class="link"> <a class="footer-link" href="#">Legal</a></li>
-              <li class="link"> <a class="footer-link" href="#">Contact</a></li>
-              <li class="link"> <a class="footer-link" href="#">Terms &amp;   Condition</a></li>
-              <li class="link"> <a class="footer-link" href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-heading">Business</h4>
-            <ul class="links" style="padding-left: 0;"> 
-              <li class="link"> <a class="footer-link" href="#">Success</a></li>
-              <li class="link"> <a class="footer-link" href="#">About Locato</a></li>
-              <li class="link"> <a class="footer-link" href="#">Blog</a></li>
-              <li class="link"> <a class="footer-link" href="#">Information</a></li>
-              <li class="link"> <a class="footer-link" href="#">Travel Guide</a></li>
-            </ul>
-          </div>
         </div>
       </div>
-      <div class="footer-botton">
-        <div class="footer-texts"> 
-          <div class="footer-text">Copyright© 2021 UIHUT LLC. All rights reserved</div>
-        </div>
-        <div class="footer-social"> 
-          <div class="social"><a href="#"><img src="../../static/app/images//fa.png" alt="logo"></a></div>
-          <div class="social"><a href="#"><img src="../../static/app/images//in.png" alt="logo"></a></div>
-          <div class="social"><a href="#"><img src="../../static/app/images//tw.png" alt="logo"></a></div>
-          <div class="social"><a href="#"><img src="../../static/app/images//ins.png" alt="logo"></a></div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
+  </main>
+
 </body>

@@ -18,9 +18,11 @@
       <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Travel Guide</a></div>
       <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Tours</a></div>
     </div>
-    <a href="" class="check-in">
+    <div class="head-button"  style="display: flex; gap:20px;">
       <img src="../../static/app/images/user.png" alt="" style="width: 25px; height: 25px;">
-    </a>
+      <span> hi {{request.user}} </span>
+      <a href={% url "logout" %}>Log Out</a>
+    </div>
   </header>
   <main>
     <section class="card"> 
@@ -78,60 +80,26 @@
         <h2 class="headding">Top Ha Noi Tours</h2>
         <div class="card-list"> 
           <div class="contents">
-            <div class="content">
-              <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src=https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1 alt="this is a picture"/>
-                <div class="button">From $40</div>
-              </div>
-              <div class="contents-content">
-                <div class="content-tittle">
-                  <div class="top">
-                    <a class="top-tittle" href="#" style="text-decoration: none;">Quảng trường Ba Đình – Lăng Bác</a>
-                  </div>
-                  <div class="ratting" style="gap: 56px;">
-                    <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                      <div class="review-text">4.8 (12 reviews)</div>
+            {% for tour in tours %}
+              <div class="content">
+                <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src=https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1 alt="this is a picture"/>
+                  <div class="button">From $40</div>
+                </div>
+                <div class="contents-content">
+                  <div class="content-tittle">
+                    <div class="top">
+                      <a class="top-tittle" href="#" style="text-decoration: none;">{{tour.name}}</a>
                     </div>
-                    <div class="duration">Duration: 9 hours</div>
-                  </div><a class="content-button" href="#" rel="noopener noreferer">Tours Price $61</a>
+                    <div class="ratting" style="gap: 56px;">
+                      <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
+                        <div class="review-text">{{tour.rate}} (12 reviews)</div>
+                      </div>
+                      <div class="duration">Duration: 9 hours</div>
+                    </div><a class="content-button" href="#" rel="noopener noreferer">Tours Price $61</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="content">
-              <div class="contents-img" style="height: 239px;"><img style="height: 100%;"  class="img" src=https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/06/ho-guom-ha-noi.jpg alt="this is a picture"/>
-                <div class="button">From $71</div>
-              </div>
-              <div class="contents-content">
-                <div class="content-tittle">
-                  <div class="top">
-                    <a class="top-tittle" href="#" style="text-decoration: none;">Hồ Gươm</a>
-                  </div>
-                  <div class="ratting" style="gap: 56px;">
-                    <div class="review"><img class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                      <div class="review-text">4.8 (12 reviews)</div>
-                    </div>
-                    <div class="duration">Duration: 9 hours</div>
-                  </div><a class="content-button" href="#"  rel="noopener noreferer">Tours Price $61</a>
-                </div>
-              </div>
-            </div>
-            <div class="content">
-              <div class="contents-img" style="height: 239px;"><img  style="height: 100%;" class="img" src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/06/thap-nuoc-hang-dau-1.jpg" alt="this is a picture"/>
-                <div class="button">From $60</div>
-              </div>
-              <div class="contents-content">
-                <div class="content-tittle">
-                  <div class="top">
-                    <a class="top-tittle" href="#" style="text-decoration: none;">Tháp nước Hàng Đậu</a>
-                  </div>
-                  <div class="ratting" style="gap: 56px;">
-                    <div class="review"><img class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                      <div class="review-text">4.8 (12 reviews)</div>
-                    </div>
-                    <div class="duration">Duration: 9 hours</div>
-                  </div><a class="content-button" href="#" rel="noopener noreferer">Tours Price $61</a>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

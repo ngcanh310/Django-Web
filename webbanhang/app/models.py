@@ -1,8 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import User
-# Create your models here.
+from django.contrib.auth.forms import UserCreationForm
+# Create form register
+class CreateUser(UserCreationForm):
+    class Meta:
+        model =  User
+        fields = ['username', 'email', 'first_name', 'last_name', 'password1', 'password2']
+        
 
-class tour(models.Model):
+# Create your models here.
+class Tour(models.Model):
     name = models.CharField(max_length=200)
     rate = models.FloatField()
 
