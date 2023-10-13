@@ -9,7 +9,9 @@ from django.contrib import messages
 # Create your views here.
 def home (request):
     tours = Tour.objects.all() 
-    context = {'tours': tours}
+    foods = Food.objects.all()
+    specials = Special.objects.all()
+    context = {'tours': tours, 'foods' : foods, 'specials':specials}
     return render(request, 'app/home.html', context)
 
 def backup(request):

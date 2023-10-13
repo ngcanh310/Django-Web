@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body> 
-  <header class="head" style="display: flex; justify-content: flex-end; gap: 500px; padding: 0 15px 0 0; align-items: center; "> 
+  <header class="head" style="display: flex; justify-content: flex-end; gap: 320px; padding: 0 15px 0 0; align-items: center; "> 
     <div class="head-frame"> 
       <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Thisng to do</a></div>
       <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Travel Guide</a></div>
@@ -33,7 +33,7 @@
               <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1695456164332-b9f6cd6e837c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80" class="d-block-w-100" alt="...">
+                    <img src="https://images.unsplash.com/photo-1695456164332-b9f6cd6e837c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80" class="d-block-w-100" alt="image">
                   </div>
                   <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1695456261833-3794ab617deb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="d-block-w-100" alt="...">
@@ -108,42 +108,17 @@
       <div class="contain">
         <h2 class="headding">Popular foods to eat in Ha Noi</h2>
         <div class="popular-list">
-          <div class="popular">
-            <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><span class="popular-button">Must See</span></div>
-            <div class="popular-content">
-              <div class="popular-tittle"><span class="tittle-1">Sep 28 10:00 AM - 1:00 PM</span>
-                <h3 class="tittle-2">Chả Cá Lã Vọng</h3>
+          {% for food in foods %}
+            <div class="popular">
+              <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><span class="popular-button">Must See</span></div>
+              <div class="popular-content">
+                <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
+                  <h3 class="tittle-2">{{food.name}}</h3>
+                </div>
+                <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
               </div>
-              <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">4.8  (12 reviews)</span></div>
             </div>
-          </div>
-          <div class="popular">
-            <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811254/blog/jnyzi3vzcfcfmowrtht0.webp" alt="this is a girl"/><span class="popular-button">Must See</span></div>
-            <div class="popular-content">
-              <div class="popular-tittle"><span class="tittle-1">Sep 28 10:00 AM - 1:00 PM</span>
-                <h3 class="tittle-2">Bánh Giò Cô Béo</h3>
-              </div>
-              <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">4.9  (13 reviews)</span></div>
-            </div>
-          </div>
-          <div class="popular">
-            <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811309/blog/f0d3dhgdoevuqel9gs1v.webp" alt="this is a girl"/><span class="popular-button">Must See</span></div>
-            <div class="popular-content">
-              <div class="popular-tittle"><span class="tittle-1">Sep 28 10:00 AM - 1:00 PM</span>
-                <h3 class="tittle-2"> Bò Tơ Quán Mộc</h3>
-              </div>
-              <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">5  (20 reviews)</span></div>
-            </div>
-          </div>
-          <div class="popular">
-            <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811328/blog/oxyawwmjoaki1uoacy6s.webp" alt="this is a girl"/><span class="popular-button">Must See</span></div>
-            <div class="popular-content">
-              <div class="popular-tittle"><span class="tittle-1">Sep 28 10:00 AM - 1:00 PM</span>
-                <h3 class="tittle-2">Lẩu Cua Đồng</h3>
-              </div>
-              <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">5.1  (21 reviews)</span></div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -163,42 +138,17 @@
       <div class="contain">
         <h2 class="headding">Specialties of Hanoi         </h2>
         <div class="gem-l">
-          <div class="gem-l-contain"> 
-            <div class="gem-l-items"><img src="https://demoda.vn/wp-content/uploads/2022/11/anh-racing-boy-di-kep-2-boc-dau-xe-giua-duong-pho.jpg" alt="this is a picture">
-              <div class="gem-l-overlay"> </div>
-              <div class="gem-l-tittle"> 
-                <h3 class="gem-l-tittle-1">Boy phố </h3>
-                <div class="gem-l-tittle-2">27 Sep, 2020</div>
+          {% for special in specials %}
+            <div class="gem-l-contain"> 
+              <div class="gem-l-items"><img src="https://demoda.vn/wp-content/uploads/2022/11/anh-racing-boy-di-kep-2-boc-dau-xe-giua-duong-pho.jpg" alt="this is a picture">
+                <div class="gem-l-overlay"> </div>
+                <div class="gem-l-tittle"> 
+                  <h3 class="gem-l-tittle-1">{{special.name}} </h3>
+                  <div class="gem-l-tittle-2">{{special.duration}}</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="gem-l-contain"> 
-            <div class="gem-l-items"><img src="https://i.pinimg.com/736x/0e/1b/72/0e1b7296c23bd3b66c36781212bde153.jpg" alt="this is a picture">
-              <div class="gem-l-overlay"> </div>
-              <div class="gem-l-tittle"> 
-                <h3 class="gem-l-tittle-1">Girl phố</h3>
-                <div class="gem-l-tittle-2">27 Sep, 2020</div>
-              </div>
-            </div>
-          </div>
-          <div class="gem-l-contain"> 
-            <div class="gem-l-items"><img src="https://toplist.vn/images/800px/son-tung-m-tp-hon-136-trieu-653504.jpg" alt="this is a picture">
-              <div class="gem-l-overlay"> </div>
-              <div class="gem-l-tittle"> 
-                <h3 class="gem-l-tittle-1">Trai PTIT</h3>
-                <div class="gem-l-tittle-2">27 Sep, 2020</div>
-              </div>
-            </div>
-          </div>
-          <div class="gem-l-contain"> 
-            <div class="gem-l-items"><img src="https://th.bing.com/th/id/OIP.PnrPt-2unjmxqZhPl5uFrQHaE8?pid=ImgDet&rs=1" alt="this is a picture">
-              <div class="gem-l-overlay"> </div>
-              <div class="gem-l-tittle"> 
-                <h3 class="gem-l-tittle-1">Ronaldo</h3>
-                <div class="gem-l-tittle-2">27 Sep, 2020</div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <a class="button-all" href="#" target="_blank" style="margin-bottom: 35px;">Explore All</a>
