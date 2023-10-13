@@ -28,7 +28,7 @@
     <section class="card"> 
       <div class="contain">
         <div class="card-contain"> 
-          <div class="card-contents"> 
+          <div class="card-contents" style="align-items: center;"> 
             <div class="card-contents-img"> 
               <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-inner">
@@ -83,19 +83,19 @@
             {% for tour in tours %}
               <div class="content">
                 <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src=https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1 alt="this is a picture"/>
-                  <div class="button">From $40</div>
+                  <div class="button">From $10</div>
                 </div>
                 <div class="contents-content">
                   <div class="content-tittle">
                     <div class="top">
-                      <a class="top-tittle" href="#" style="text-decoration: none;">{{tour.name}}</a>
+                      <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
                     </div>
                     <div class="ratting" style="gap: 56px;">
                       <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
                         <div class="review-text">{{tour.rate}} (12 reviews)</div>
                       </div>
-                      <div class="duration">Duration: 9 hours</div>
-                    </div><a class="content-button" href="#" rel="noopener noreferer">Tours Price $61</a>
+                      <div class="duration">Duration: {{tour.duration}} hours</div>
+                    </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
                   </div>
                 </div>
               </div>

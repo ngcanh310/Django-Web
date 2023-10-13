@@ -15,7 +15,9 @@ def home (request):
     return render(request, 'app/home.html', context)
 
 def backup(request):
-    context = {}
+    id = request.GET.get("id", "")
+    tours = Tour.objects.filter(id = id)
+    context = {'tours': tours}
     return render(request, 'app/backup.html', context)
 
 def check(request):
@@ -28,7 +30,7 @@ def check(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.info(request, 'user or password is not correct !')
+            messages.info(request, 'User or password is not correct !')
     context = {}
     return render(request, 'app/check.html', context)
 
@@ -42,5 +44,6 @@ def register(request):
         form = CreateUser(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('check')
     context = {'form': form}
     return render(request, 'app/register.html', context)

@@ -10,13 +10,17 @@ class CreateUser(UserCreationForm):
 
 # Create your models here.
 class Tour(models.Model):
+    idTour = models.IntegerField()
     name = models.CharField(max_length=200)
     rate = models.FloatField()
+    duration = models.IntegerField()
+    cost = models.IntegerField()
 
     def __str__(self):
         return self.name
     
 class Food(models.Model):
+    idFood = models.IntegerField()
     name = models.CharField(max_length=200)
     rate = models.FloatField()
     duration = models.CharField(max_length=200)

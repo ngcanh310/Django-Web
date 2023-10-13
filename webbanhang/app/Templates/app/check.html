@@ -48,6 +48,9 @@
       
       <p> You don't have a acount ? <a href={% url 'register' %}> register </a> </p>
 
+      {% for message in messages%}
+        <p id="message" style="color: red;">{{message}}</p>
+      {% endfor %}
     </form>
   </main>
 </body>
