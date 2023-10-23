@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food-List</title>
+  <link rel="stylesheet" href="../../static/app/css/food.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body> 
+  <header class="head" style="display: flex; justify-content: space-between; gap: 320px; padding: 0 25px; align-items: center; "> 
+    <a href= {% url "home" %} ><img srcSet="../../static/app/images/logo-icon.png 2x" alt="logo" style=" cursor: pointer;"></a>
+    <div class="head-frame"> 
+      <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Thisng to do</a></div>
+      <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Travel Guide</a></div>
+      <div class="head-button"> <a class="head-link" href="#" style="text-decoration: none;">Tours</a></div>
+    </div>
+    <div class="head-button"  style="display: flex; gap:20px;">
+      <img src="../../static/app/images/user.png" alt="" style="width: 25px; height: 25px;">
+      <span> hi {{request.user}} </span>
+      <a href={% url "logout" %}>Log Out</a>
+    </div>
+  </header>
+  <h1 class="head-main">Popular foods to eat in Ha Noi</h1>
+  <main>
+    {% for food in foods %}
+      <div class="popular">
+        <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
+        <div class="popular-content">
+          <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
+            <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
+          </div>
+          <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
+        </div>
+      </div>
+    {% endfor %}
+  </main>
+  <footer class="footer">
+    <div class="contain">
+      <div class="footer-list"> 
+        <div class="footer-items"> 
+          <div class="footer-item-logo"> <img class="item-logo" srcset="../../static/app/images//logo-icon.png 2x" alt="Airtrav">
+            <div class="item-tittle">
+              <div class="footer-tittle-1">Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.</div>
+              <form class="footer-tittle-2">
+                <input class="footer-ip" type="email" placeholder="Enter your email">
+                <button class="row-right" type="submit"><img class="button-arrow-right" srcSet="../../static/app/images//line.png 2x" alt="right-arrow"></button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h4 class="footer-heading">Services</h4>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Trip Planner</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour Planning</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour Guide</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour Package</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Tour advice</a></li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h4 class="footer-heading">Support</h4>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Account</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Legal</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Contact</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Terms &amp;   Condition</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-item">
+            <h4 class="footer-heading">Business</h4>
+            <ul class="links" style="padding-left: 0;"> 
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Success</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">About Locato</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Blog</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Information</a></li>
+              <li class="link"> <a class="footer-link" href="#" style="text-decoration: none;">Travel Guide</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-botton">
+        <div class="footer-texts"> 
+          <div class="footer-text">Copyright© 2021 UIHUT LLC. All rights reserved</div>
+        </div>
+        <div class="footer-social"> 
+          <div class="social"><a href="#"><img src="../../static/app/images//fa.png" alt="logo"></a></div>
+          <div class="social"><a href="#"><img src="../../static/app/images//in.png" alt="logo"></a></div>
+          <div class="social"><a href="#"><img src="../../static/app/images//tw.png" alt="logo"></a></div>
+          <div class="social"><a href="#"><img src="../../static/app/images//ins.png" alt="logo"></a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>

@@ -126,13 +126,6 @@ padding: 0 25px 0 0;
 }
 
 /* card */
-.card .contain {
-  border-bottom: 1px solid #c4c4c4;
-}
-
-.card .contain {
-  border-bottom: 1px solid #c4c4c4;
-}
 
 .card-contents {
   display: flex;
@@ -255,6 +248,10 @@ padding: 0 25px 0 0;
 
 .contents-tittle {
   flex-shrink: 1;
+}
+
+.card .contain {
+  border-bottom: none;
 }
 
 /* top-tour */

@@ -20,6 +20,12 @@ def backup(request):
     context = {'tours': tours}
     return render(request, 'app/backup.html', context)
 
+def backupFood(request):
+    id = request.GET.get("id", "")
+    foods = Food.objects.filter(id = id)
+    context = {'foods': foods}
+    return render(request, 'app/backupFood.html', context)
+
 def check(request):
     
     if request.method == 'POST':
@@ -47,3 +53,13 @@ def register(request):
             return redirect('check')
     context = {'form': form}
     return render(request, 'app/register.html', context)
+
+def listTour(request):
+    tours = Tour.objects.all() 
+    context = {'tours': tours}
+    return render(request, 'app/listTour.html', context)
+
+def listFood(request):
+    foods = Food.objects.all() 
+    context = {'foods' : foods}
+    return render(request, 'app/listFood.html', context)
