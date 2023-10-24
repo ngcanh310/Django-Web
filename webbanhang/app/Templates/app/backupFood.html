@@ -1,10 +1,10 @@
-
+{% load static %}
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FOOD</title>
-  <link rel="stylesheet" href="../../static/app/css/backupFood.css">
+  <link rel="stylesheet" href="{% static './app/css/backupFood.css' %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -28,28 +28,175 @@
   </header>
   <main>
     {% for food in foods %}
-      <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-        <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
-          <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://phunuketnoi.com/wp-content/uploads/2021/03/mon-ngon-moi-ngay.jpg" alt="image">
-        </div>
-        <div class="main-content" >
-          <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
-          <div class="main-content-review-contain" style="display: flex; gap: 100px">
-            <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-              <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-              <div class="review-main">{{food.rate}} (12 reviews)</div>
+      {% if food.idFood == 1 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
             </div>
-            <div class="duration">Durations: {{food.duration}} hours</div>
-          </div>
-          <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-          <h4>City of Angels</h4>
-          <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-          <span class="time">In your trip Sep 28 - Oct 1</span>
-          <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-            <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">Find a time</button>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
           </div>
         </div>
-      </div>
+      {% endif %}
+      {% if food.idFood == 2 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://cdn-www.vinid.net/2020/06/9d4ab5da-b%C3%BAn-ch%E1%BA%A3-h%C3%A0-n%E1%BB%99i.jpg" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
+            </div>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if food.idFood == 3 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://kenh14cdn.com/2017/lau7-1498851412636.jpg" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
+            </div>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if food.idFood == 4 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://halotravel.vn/wp-content/uploads/2021/06/th%E1%BB%8Bt-ch%C3%B3-ngon-%E1%BB%9F-H%C3%A0-%C4%90%C3%B4ng.jpg" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
+            </div>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if food.idFood == 5 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://product.hstatic.net/1000182631/product/z4012133309791_e37ba89a4448528c19da1dfe14a9055a_6de19bc3ba7f444896ab59d669663557_master.jpg" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
+            </div>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if food.idFood == 6 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://thuocdantoc.vn/wp-content/uploads/2019/10/cach-ngam-ruou-dinh-lang.jpg" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
+            </div>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if food.idFood == 7 %}
+        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+          <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
+            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://images.creativemarket.com/0.1.0/ps/5265209/1820/1213/m1/fpnw/wm1/dt4y14vx2ajlxpsa7goziofgtal9fuhfdw4cnmosknebiqtqsqmw9ksnsjl4ucuu-.jpg?1540524477&s=f8cfa282d0eb168a1a6ae13a2e61f9db"/>
+            <div class="popular-content">" alt="image">
+          </div>
+          <div class="main-content" >
+            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>
+            <div class="main-content-review-contain" style="display: flex; gap: 100px">
+              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+                <div class="review-main">{{food.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Durations: {{food.duration}} hours</div>
+            </div>
+            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+            <h4>City of Angels</h4>
+            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+            <span class="time">In your trip Sep 28 - Oct 1</span>
+            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">$15,000 - $150,000</button>
+            </div>
+          </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </main>
   <footer class="footer">
