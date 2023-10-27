@@ -30,186 +30,24 @@
   <h1> Top Tours </h1>
   <main>
     {% for tour in tours %}
-      {% if tour.idTour == 1 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
+      <div class="content">
+        <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="this is a picture"/>
+          <div class="button">From $10</div>
+        </div>
+        <div class="contents-content">
+          <div class="content-tittle">
+            <div class="top">
+              <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
             </div>
+            <div class="ratting" style="gap: 56px;">
+              <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
+                <div class="review-text">{{tour.rate}} (12 reviews)</div>
+              </div>
+              <div class="duration">Duration: {{tour.duration}} hours</div>
+            </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
           </div>
         </div>
-      {% endif %}
-      {% if tour.idTour == 2 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/06/ho-guom-ha-noi.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 3 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://ik.imagekit.io/tvlk/blog/2022/08/nha-tho-lon-ha-noi-2.jpg?tr=dpr-1.5" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 4 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://storage.googleapis.com/fvallimages/uploads/blog/top-7-places-to-visit-in-da-nang-vietnam-4316.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 5 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://cell.com.vn/wp-content/uploads/2021/03/12-1536x1024.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 6 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://www.vietnamonline.com/media/uploads/froala_editor/images/VNO_CaMau.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 7 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://media.mia.vn/uploads/blog-du-lich/thu-uong-ruou-ghe-kon-tum-cuc-ngon-cua-vung-dat-cao-nguyen-01-1658875429.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 8 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="http://divui.com/blog/wp-content/uploads/2018/02/kinh-nghiem-tham-quan-dia-dao-cu-chi-6.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 9 %}
-        <div class="content">
-          <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://vivutour.vn/wp-content/uploads/2022/10/hang-pac-po.jpg" alt="this is a picture"/>
-            <div class="button">From $10</div>
-          </div>
-          <div class="contents-content">
-            <div class="content-tittle">
-              <div class="top">
-                <a class="top-tittle" href={% url 'backup' %}?id={{tour.id}} style="text-decoration: none;">{{tour.name}}</a>
-              </div>
-              <div class="ratting" style="gap: 56px;">
-                <div class="review"><img style="height: 100%;"  class="review-star" src="../../static/app/images//star.png" alt="star"/>
-                  <div class="review-text">{{tour.rate}} (12 reviews)</div>
-                </div>
-                <div class="duration">Duration: {{tour.duration}} hours</div>
-              </div><a class="content-button" href={% url 'backup' %}?id={{tour.id}} rel="noopener noreferer">Tours Price ${{tour.cost}}</a>
-            </div>
-          </div>
-        </div>
-      {% endif %}
+      </div>
     {% endfor %}
   </main>
   <footer class="footer">

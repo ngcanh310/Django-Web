@@ -29,83 +29,15 @@
   <h1 class="head-main">Popular foods</h1>
   <main>
     {% for food in foods %}
-      {% if food.idFood == 1 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
+      <div class="popular">
+        <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
+        <div class="popular-content">
+          <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
+            <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
           </div>
+          <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
         </div>
-      {% endif %}
-      {% if food.idFood == 2 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://cdn-www.vinid.net/2020/06/9d4ab5da-b%C3%BAn-ch%E1%BA%A3-h%C3%A0-n%E1%BB%99i.jpg" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
-          </div>
-        </div>
-      {% endif %}
-      {% if food.idFood == 3 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://kenh14cdn.com/2017/lau7-1498851412636.jpg" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
-          </div>
-        </div>
-      {% endif %}
-      {% if food.idFood == 4 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://halotravel.vn/wp-content/uploads/2021/06/th%E1%BB%8Bt-ch%C3%B3-ngon-%E1%BB%9F-H%C3%A0-%C4%90%C3%B4ng.jpg" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
-          </div>
-        </div>
-      {% endif %}
-      {% if food.idFood == 5 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://product.hstatic.net/1000182631/product/z4012133309791_e37ba89a4448528c19da1dfe14a9055a_6de19bc3ba7f444896ab59d669663557_master.jpg" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
-          </div>
-        </div>
-      {% endif %}
-      {% if food.idFood == 6 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://thuocdantoc.vn/wp-content/uploads/2019/10/cach-ngam-ruou-dinh-lang.jpg" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
-          </div>
-        </div>
-      {% endif %}
-      {% if food.idFood == 7 %}
-        <div class="popular">
-          <div class="popular-img"><img class="popular-image" src="https://images.creativemarket.com/0.1.0/ps/5265209/1820/1213/m1/fpnw/wm1/dt4y14vx2ajlxpsa7goziofgtal9fuhfdw4cnmosknebiqtqsqmw9ksnsjl4ucuu-.jpg?1540524477&s=f8cfa282d0eb168a1a6ae13a2e61f9db" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
-          <div class="popular-content">
-            <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
-              <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>
-            </div>
-            <div class="popular-review"><img class="popular-star" src="../../static/app/images//star.png" alt="star"/><span class="popular-text">{{food.rate}}  (12 reviews)</span></div>
-          </div>
-        </div>
-      {% endif %}
+      </div>
     {% endfor %}
   </main>
   <footer class="footer">

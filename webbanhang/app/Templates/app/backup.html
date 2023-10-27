@@ -28,222 +28,28 @@
   </header>
   <main>
     {% for tour in tours %}
-      {% if tour.idTour == 1 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="image">
+      <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
+        <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
+          <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="image">
+        </div>
+        <div class="main-content" >
+          <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
+          <div class="main-content-review-contain" style="display: flex; gap: 100px">
+            <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
+              <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
+              <div class="review-main">{{tour.rate}} (12 reviews)</div>
+            </div>
+            <div class="duration">Durations: {{tour.duration}} hours</div>
           </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
+          <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
+          <h4>City of Angels</h4>
+          <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
+          <span class="time">In your trip Sep 28 - Oct 1</span>
+          <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
+            <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
           </div>
         </div>
-      {% endif %}
-      {% if tour.idTour == 2 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/06/ho-guom-ha-noi.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 3 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://ik.imagekit.io/tvlk/blog/2022/08/nha-tho-lon-ha-noi-2.jpg?tr=dpr-1.5" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 4 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://storage.googleapis.com/fvallimages/uploads/blog/top-7-places-to-visit-in-da-nang-vietnam-4316.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 5 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://cell.com.vn/wp-content/uploads/2021/03/12-1536x1024.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 6 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://www.vietnamonline.com/media/uploads/froala_editor/images/VNO_CaMau.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 7 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://media.mia.vn/uploads/blog-du-lich/thu-uong-ruou-ghe-kon-tum-cuc-ngon-cua-vung-dat-cao-nguyen-01-1658875429.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 8 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="http://divui.com/blog/wp-content/uploads/2018/02/kinh-nghiem-tham-quan-dia-dao-cu-chi-6.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if tour.idTour == 9 %}
-        <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
-          <div class="main-img" style="aspect-ratio: 1/1; max-width: 420px;">
-            <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://vivutour.vn/wp-content/uploads/2022/10/hang-pac-po.jpg" alt="image">
-          </div>
-          <div class="main-content" >
-            <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{tour.name}}</h2>
-            <div class="main-content-review-contain" style="display: flex; gap: 100px">
-              <div class="main-content-review" style="display: flex; gap: 4px; margin-bottom: 10px;">
-                <img src="../../static/app/images/star.png" alt="icon-star" class="review-star">
-                <div class="review-main">{{tour.rate}} (12 reviews)</div>
-              </div>
-              <div class="duration">Durations: {{tour.duration}} hours</div>
-            </div>
-            <p>Sacred & Religious Sites · Shopping Malls · Gift & Specialty Shops</p>
-            <h4>City of Angels</h4>
-            <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quo error cum nobis nihil reiciendis fugit? Tempora vero porro sequi, ducimus officia ut corrupti, nemo dicta corporis quae quis modi.</p>
-            <span class="time">In your trip Sep 28 - Oct 1</span>
-            <div class="pay" style="display: flex; justify-content: flex-end; padding: 0 30px 0 0; margin-top: 10px;">
-              <button class="pay-button" style="background-color: #3b71fe; color: white; padding: 12px 20px; border-radius: 20px;">View more option</button>
-            </div>
-          </div>
-        </div>
-      {% endif %}
+      </div>
     {% endfor %}
   </main>
   <footer class="footer">

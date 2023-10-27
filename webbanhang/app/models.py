@@ -15,6 +15,7 @@ class Tour(models.Model):
     rate = models.FloatField()
     duration = models.IntegerField()
     cost = models.IntegerField()
+    image = models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -24,6 +25,7 @@ class Food(models.Model):
     name = models.CharField(max_length=200)
     rate = models.FloatField()
     duration = models.CharField(max_length=200)
+    image = models.ImageField(blank=True, null=True)
 
     def __str__(self) :
         return self.name
