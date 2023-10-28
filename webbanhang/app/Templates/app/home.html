@@ -77,13 +77,13 @@
     </section>
     <section class="top-tour">
       <div class="contain">
-        <a href="listTour" style="text-decoration: none;"><h2 class="headding">Top Tours</h2></a>
+        <a href={% url "listTour" %} style="text-decoration: none;"><h2 class="headding">Top Tours</h2></a>
         <div class="card-list"> 
           <div class="contents">
             {% for tour in tours %}
               {% if tour.idTour <= 3 %}
                 <div class="content">
-                  <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="this is a picture"/>
+                  <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src={{tour.image}} alt="this is a picture"/>
                     <div class="button">From $10</div>
                   </div>
                   <div class="contents-content">
@@ -108,12 +108,12 @@
     </section>
     <section class="popular-tour"> 
       <div class="contain">
-        <a href="listFood" style="text-decoration: none;"><h2 class="headding">Popular foods</h2></a>
+        <a href={% url "listFood" %} style="text-decoration: none;"><h2 class="headding">Popular foods</h2></a>
         <div class="popular-list">
           {% for food in foods %}
             {% if food.idFood <= 4 %}
               <div class="popular">
-                <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
+                <div class="popular-img"><img class="popular-image" src={{food.image}} alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
                 <div class="popular-content">
                   <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
                     <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>

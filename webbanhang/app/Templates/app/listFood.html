@@ -30,7 +30,7 @@
   <main>
     {% for food in foods %}
       <div class="popular">
-        <div class="popular-img"><img class="popular-image" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
+        <div class="popular-img"><img class="popular-image" src="../{{food.image}}" alt="this is a girl"/><a href={% url 'backupFood' %}?id={{food.id}} class="popular-button" style="text-decoration: none;">Must See</a></div>
         <div class="popular-content">
           <div class="popular-tittle"><span class="tittle-1">{{food.duration}}</span>
             <a href={% url 'backupFood' %}?id={{food.id}} style="text-decoration: none"><h3 class="tittle-2">{{food.name}}</h3></a>

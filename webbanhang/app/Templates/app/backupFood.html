@@ -30,7 +30,7 @@
     {% for food in foods %}
       <div class="contain-main" style="display: flex; gap: 30px; justify-content: space-between; align-items: flex-start; padding: 20px;">
         <div class="main-img" style="aspect-ratio: 1/1; width:362px; display:flex; flex-shrink: 0">
-          <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1620811234/blog/hx0kcj8ibmy1uxmvue1f.webp" alt="image">
+          <img style="height: 100%;width: 100%; object-fit: cover; border-radius: 30px;" src="../{{food.image}}" alt="image">
         </div>
         <div class="main-content" >
           <h2 class="main-content-heading" style="margin-bottom: 20px;"> {{food.name}}</h2>

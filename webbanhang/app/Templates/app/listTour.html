@@ -1,5 +1,5 @@
 
-{% load static %}
+
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
@@ -31,7 +31,7 @@
   <main>
     {% for tour in tours %}
       <div class="content">
-        <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="https://th.bing.com/th/id/R.7248e465dae0c9fadf89ad372ef0848a?rik=bNRXsI2CSQPTiA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="this is a picture"/>
+        <div class="contents-img" style="height: 239px;"><img style="height: 100%;" class="img" src="../{{tour.image}}" alt="this is a picture"/>
           <div class="button">From $10</div>
         </div>
         <div class="contents-content">
