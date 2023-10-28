@@ -33,6 +33,7 @@ class Food(models.Model):
 class Special(models.Model):
     name = models.CharField( max_length=200)
     duration = models.CharField(max_length = 200)
+    image = models.ImageField(blank=True, null=True)
 
     def __str__(self) :
         return self.name
