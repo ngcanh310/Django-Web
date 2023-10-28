@@ -1,1 +1,1 @@
-# Dự án lập trình Web Python sử dụng framework Django (chưa hoàn thành)
+# Dự án lập trình Web Python sử dụng framework Django
